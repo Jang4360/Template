@@ -3,6 +3,30 @@
 This file defines the non-negotiable delivery and safety rules for this template repository.
 All contributors, human or agent-based, must follow these rules for every worktree and PR.
 
+# Codex Operating Model
+
+This repository uses structured Skills.
+
+When implementing features:
+1. Identify matching Skill.
+2. Apply SKILL.md steps.
+3. Do NOT restate canonical security rules.
+4. Update artifacts.
+5. Run Fast Gate.
+6. Reference SECURITY_CHECKLIST.md in PR.
+
+If multiple skills apply, execute in this order:
+1) nextjs-app-router-fullstack
+2) supabase-auth-ssr-session
+3) supabase-rls-standard
+4) billing-toss-stripe
+5) admin-rbac-audit
+6) full-gate-ci
+7) testing-vitest-playwright
+8) observability-sentry-logging
+9) docs-mermaid-architecture
+10) pr-sequencing-worktree
+
 ## Security Rules
 - Never expose `SUPABASE_SERVICE_ROLE_KEY` to client bundles, browser runtime, or public env vars.
 - Client-side Supabase access is limited to anon key usage only.
